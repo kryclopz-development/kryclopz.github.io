@@ -1,0 +1,254 @@
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(25,25,25);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: whitesmoke;
+  color: black;
+}
+
+p {
+  text-size-adjust: none;
+  color: white;
+  font-family: Space Grotesk;
+}
+
+body {
+  background-color: rgb(14, 14, 14);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#centerRect {
+  background-color: rgb(20, 20, 20);
+  border-radius: 20px;
+  padding: 50px;
+  width: 800px;
+  height: 400px;
+}
+
+#pfp {
+  border-radius: 40%;
+  width: 140px;
+  height: 140px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#pfpText {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#name {
+  margin-top: 10px;
+  color: white;
+  font-size: 65px;
+  font-family: Space Grotesk;
+}
+
+.infoIcons {
+  display: inline-block;
+  margin-top: 5px;
+  width: 29px;
+  height: 29px;
+}
+
+.infoText {
+  vertical-align: text-bottom;
+  color: white;
+  font-family: Space Grotesk;
+  font-size: 24px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#tabs {
+  margin-top: 20px;
+  margin-right: 30px;
+  width: 145px;
+  display: inline-block;
+}
+
+.tabText {
+  color: gray;
+  text-align: justify;
+  font-family: Space Grotesk;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+#aboutMe {
+  color: white;
+  font-weight: bold;
+}
+
+.tabText:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -5;
+  left: 0;
+  background-color: white;
+  transform-origin: left;
+  border-radius: 5px;
+  transition: all 0.25s ease;
+}
+
+.tabText:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#tabContent {
+  border-radius: 20px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 20px;
+  background-color: rgb(25, 25, 25);
+  width: 618px;
+  height: 250px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#tab_codesIn {
+  width: 95%;
+}
+
+@keyframes fall {
+  from {
+    opacity: 0%;
+    bottom: 5px;
+  }
+
+  to {
+    opacity: 100%;
+    bottom: 0px;
+  }
+}
+
+@keyframes pgBarIn {
+  from {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  to {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}
+
+.tabContent {
+  animation: fall 0.25s;
+  position: relative;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.codeIcons {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
+
+.codeDesc {
+  display: inline-block;
+  vertical-align: top;
+  width: 89%;
+  position: relative;
+  bottom: 3px;
+}
+
+.codeName {
+  font-size: 25px;
+  display: inline-block;
+}
+
+.codeSub {
+  display: inline-block;
+  font-size: 15px;
+}
+
+.codePercent {
+  display: inline-block;
+  font-size: 15px;
+}
+
+.pgbar {
+  vertical-align: middle;
+  display: inline-block;
+  background-color: rgb(40, 40, 40);
+  width: 90%;
+  height: 5px;
+  border-radius: 20px;
+}
+
+.bar {
+  display: block;
+  border-radius: 20px;
+  background-color: white;
+  animation: pgBarIn 0.5s;
+  height: 100%;
+}
+
+#bar_js {
+  width: 85%;
+}
+
+#bar_java {
+  width: 40%
+}
+
+#bar_cpp {
+  width: 25%;
+}
+
+#bar_py {
+  width: 10%;
+}
+
+.extraIcons {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.extraP {
+  position: relative;
+  top: 2px;
+  vertical-align: top;
+  display: inline-block;
+}
